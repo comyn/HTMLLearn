@@ -8,7 +8,7 @@
     <title>Document</title>
     <script>
         // window.onload = function () {
-                 // 页面加载后，自动加载，相当于didload           
+        // 页面加载后，自动加载，相当于didload           
 
         // }
         function login() {
@@ -18,11 +18,34 @@
 </head>
 
 <body>
-    <form action="7.html" method="get">
-        用户名：
-        <input type="text" name="account" id="account">
+    <form action="7.html" method="get" name="loginUserInfo">
+        <label>用户名：
+            <input type="text" name="account" id="account">
+        </label>
+        <!-- 多个文本框，指定某一个文本框的id，用label 的for属性获取 -->
         <br /> 密&nbsp;&nbsp;&nbsp;码：
-        <input type="password" name="password" id="password">
+        <input type="password" name="password" id="password" maxlength="6">
+        <br /> 男
+        <input type="radio" name="sex" id="boy"> 女
+        <input type="radio" name="sex" id="girl">
+        <br /> 兴趣爱好：
+        <br />
+        <input type="checkbox" name="like" id="like1">足球
+        <input type="checkbox" name="like" id="like1">篮球
+        <input type="checkbox" name="like" id="like1">乒乓球
+        <input type="checkbox" name="like" id="like1">羽毛球
+        <br /> 建议：
+        <br />
+        <textarea name="textarea" id="textarea" cols="30" rows="10">请输入内容</textarea>
+        <br /> 籍贯：
+        <br />
+        <select name="" id="">
+            <option>点击选择您的籍贯</option>
+            <option>北京</option>
+            <option>上海</option>
+            <option selected="selected">广东</option>
+            <option>福建</option>
+        </select>
         <input type="button" value="登录" onclick="login()">
         <input type="image" src="" alt="111">
         <br />
