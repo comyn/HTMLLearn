@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        li:first-child {
+            color: red;
+        }
+
+        li:last-child {
+            color: blue;
+        }
+
+        /* 从顺第一个往后算 even偶数 还可以是2n */
+
+        li:nth-child(even) {
+            color: yellow;
+        }
+
+        /* 从倒数第一个开始往第一个算 odd奇数还可以是2n+1*/
+
+        li:nth-last-child(odd) {
+            color: fuchsia;
+        }
+    </style>
+</head>
+
+<body>
+    <ol>
+        <li>11111</li>
+        <li>222222</li>
+        <li>33333</li>
+        <li>44444</li>
+        <li>55555</li>
+        <li>66666</li>
+        <li>7777</li>
+
+    </ol>
+</body>
+
+</html>
