@@ -1,0 +1,18 @@
+/* 子控件 */
+.site-r a {
+    color: red;
+}
+/* 子子控件 */
+.nav ul li a {
+    color: blue;
+}
+/* 同级控件 */
+.nav, .sitenav {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 14px;
+}
+/* 部门子控件 */
+.nav>ul>li>a{
+    color: green;
+    
+}
