@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: #000000;
+            /* display: inline-block; */
+            float: left;
+        }
+
+        div:nth-child(2) {
+            width: 140px;
+            height: 300px;
+            background-color: pink;
+        }
+
+        .clear-fix::before {
+            content: "";
+            display: table;
+        }
+
+        .clear-fix::after {
+            clear: both;
+        }
+
+        .clear-fix {
+            *zoom: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        1、box-shoadow:水平、垂直、模糊距离、阴影尺寸、阴影颜色、内部阴影/外部阴影，外部阴影不需要设置，默认就是外部阴影;
+        <br /> 2、float:left;脱离文档流，文档流即标准流， 标准流即默认的块元素时是一个块级元素占一行，行内元素紧跟上一个行内元素占一行。 浮动流：即脱离文档流，下一个块级元素向上一个元素浮动紧跟
+    </div>
+    <div>
+
+    </div>
+    <!-- <div>
+
+    </div> -->
+</body>
+
+</html>

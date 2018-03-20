@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: green;
+
+
+        }
+
+        div:first-child {
+            background-color: red;
+            float: left;
+
+        }
+
+        div:nth-child(2) {
+
+            float: left;
+        }
+
+        div:last-child {
+            height: 300px;
+            width: 150px;
+            background-color: hotpink;
+            float: left;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        float:left; 浮动是当前的元素浮动在标准流的上面，如果只是当前浮动，下一个元素会在浮动元素的底部，会遮住下一个元素或部分； 如果是某一个盒子内的元素都浮动，则变成紧挨的行内块结构
+        <p>
+            浮动：要浮动就得在父元素下的所有子元素都浮动，要不容易出现混乱
+            <br /> 如果块级元素添加浮动之后，由于会变成行内块元素，块级元素大小会根据自身内容决定，以适应行内块结构
+            <br /> 行内元素添加浮动后，也会变成行内块元素，因此给行内元素增加高度后会有效
+        </p>
+    </div>
+    <div>
+
+    </div>
+    <div>
+
+    </div>
+</body>
+
+</html>

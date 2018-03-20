@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box1 {
+            /* height: 200px; */
+            width: 600px;
+            background-color: pink;
+        }
+
+        .box2 {
+            width: 600px;
+            height: 240px;
+            background-color: purple;
+        }
+
+        .son1 {
+            width: 150px;
+            height: 100px;
+            background-color: skyblue;
+            float: left;
+        }
+
+        .son2 {
+            width: 300px;
+            height: 100px;
+            background-color: hotpink;
+            float: left;
+        }
+
+        /* 单个冒号用于伪类，两个冒号用于伪元素 */
+
+        .clear-fix:before,
+        .clear-fix:after {
+            content: "";
+            display: table;
+        }
+
+        .clear-fix:after {
+            clear: both;
+        }
+
+        .clear-fix {
+            *zoom: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box1 clear-fix">
+        <div class="son1"></div>
+        <div class="son2"></div>
+    </div>
+    <div class="box2">
+        1、alt+鼠标左键拖动复制图片 2、command+t改变大小 3、F7图层属性面板出现和隐藏
+    </div>
+</body>
+
+</html>
