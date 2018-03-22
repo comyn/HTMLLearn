@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* 清除浮动 */
+
+        .clearfix::before .clearfix::after {
+            display: table;
+            content: "";
+        }
+
+        .clearfix::after {
+            clear: both;
+        }
+
+        /* 兼容老版本浏览器 */
+
+        .clearfix {
+            *zoom: 1;
+        }
+
+        a {
+            color: #050505;
+            /* 取消下划线 */
+            text-decoration: none;
+        }
+
+        input {
+            /* 所有的表单边框为0 */
+            border: 0;
+            /* 盒子模型的border和padding都包含到width中 */
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* css初始化结束 */
+
+        /* 页面头部分 */
+
+        body {
+            background-color: #f3f5f7;
+        }
+
+        header {
+            height: 100px;
+            /* background-color: pink; */
+            overflow: hidden;
+        }
+
+        nav {
+            width: 1366px;
+            height: 42px;
+            /* background-color: purple; */
+            margin: 26px auto;
+        }
+
+        .logo {
+            float: left;
+            height: 42px;
+            line-height: 42px;
+        }
+
+        .navbar {
+            float: left;
+            height: 42px;
+            line-height: 42px;
+            margin-left: 50px;
+        }
+
+        .navbar li {
+            float: left;
+        }
+
+        .navbar li a {
+            padding: 0 10px;
+            display: block;
+            height: 42px;
+        }
+
+        .navbar li a:hover {
+            border-bottom: 2px solid #00a4ff;
+        }
+
+        .search {
+            width: 410px;
+            height: 38px;
+            border: 1px solid #00a4ff;
+            float: right;
+        }
+
+        .search input[type=text] {
+            background-color: pink;
+            width: 360px;
+            height: 38px;
+            padding-left: 20px;
+            float: left;
+        }
+
+        .search input[type=submit] {
+            width: 50px;
+            height: 38px;
+            background-color: #00a4ff;
+            float: left;
+        }
+
+        .personal {
+            float: right;
+            height: 42px;
+            line-height: 42px;
+            /* 上 右 下 左 */
+            margin: 0 15px 0 35px;
+        }
+
+        .banner {
+            height: 420px;
+            background-color: #1c036c;
+        }
+
+        .banner-in {
+            height: 420px;
+            background: url() 0 0 no-repeat;
+        }
+
+        .slidebar {
+            height: 420px;
+            width: 190px;
+            background: rgba(0, 0, 0, 0.3);
+            float: left;
+        }
+
+        .slidebar li a {
+            color: #fff;
+            font-size: 14px;
+            padding: 0 20px;
+            display: block;
+            height: 45px;
+            line-height: 45px;
+        }
+
+        .slidebar li a:hover {
+            color: #00a4ff;
+        }
+
+        .slidebar a span {
+            float: right;
+            font-family: arial;
+        }
+
+        /* 小课表 */
+
+        .timetable {
+            float: right;
+            width: 230px;
+            height: 300px;
+            background-color: #fff;
+            margin-top: 50px;
+        }
+
+        .timetable dt {
+            height: 50px;
+            line-height: 50px;
+            background-color: #9bceea;
+            text-align: center;
+            color: #fff;
+            /* 100-900范围 */
+            font-weight: 700;
+            /* 设置字间距 */
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+        }
+
+        .timetable dd {
+            width: 193px;
+            height: 60px;
+            /* background-color: purple; */
+            margin: 0 auto;
+            border-bottom: 1px solid #ccc;
+            padding-top: 12px;
+            box-sizing: border-box;
+        }
+
+        .timetable dd:last-child {
+            border: 0;
+        }
+
+        .timetable dd h4 {
+            font-size: 16px;
+            font-weight: normal;
+            color: #4e4e4e;
+        }
+
+        .timetable dd p {
+            color: #a5a5a5;
+            font-size: 14px;
+        }
+
+        .timetable dd a {
+            height: 38px;
+            border: 1px solid #00a4ff;
+            color: #00a4ff;
+            text-align: center;
+            display: block;
+            line-height: 38px;
+            font-weight: 700;
+        }
+
+        .timetable dd a:hover {
+            background-color: #00a4ff;
+            color: #fff;
+        }
+
+        .recommend {
+            height: 60px;
+            line-height: 60px;
+            background-color: #fff;
+            margin-top: 8px;
+            /* 盒子阴影 水平位置 垂直位置 模糊距离 影子阴影 */
+            box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+        }
+
+        .recommend a {
+            padding: 0 30px;
+            border-right: 1px solid #ccc;
+        }
+
+
+
+        .recommend a:hover {
+            color: #00a4ff;
+        }
+
+        .recommend a:first-child {
+            color: #00a4ff;
+        }
+
+        .recommend a:last-child {
+            color: #00a4ff;
+            border: 0;
+            float: right;
+        }
+    </style>
+</head>
+<!-- 快速定位 ctrl+g -->
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <!-- <img src="" alt=""> -->
+                <div>logo图片</div>
+            </div>
+            <div class="navbar">
+                <ul>
+                    <li>
+                        <a href="#">首页</a>
+                    </li>
+                    <li>
+                        <a href="#">课程</a>
+                    </li>
+                    <li>
+                        <a href="#">计划安排</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- 个人中心部分 -->
+            <div class="personal">
+                <a href="#">
+                    个人中心
+                </a>
+                <a href="#">
+
+                </a>
+            </div>
+
+            <div class="search">
+                <form action="">
+                    <input type="text" placeholder="请输入关键字">
+                    <input type="submit" value="放大镜">
+                </form>
+            </div>
+
+        </nav>
+    </header>
+
+    <div class="banner">
+        <div class="banner-in container">
+            <div class="slidebar">
+                <ul>
+                    <li>
+                        <a href="#">前端开发
+                            <span>></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">前端开发
+                            <span>></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">前端开发
+                            <span>></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">前端开发
+                            <span>></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">前端开发
+                            <span>></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">前端开发
+                            <span>></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">前端开发
+                            <span>></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">前端开发
+                            <span>></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">前端开发
+                            <span>></span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- 小课程表部分 -->
+            <dl class="timetable">
+                <dt>我的课程表</dt>
+                <dd>
+                    <h4>继续学习 程序语言设计</h4>
+                    <p>正在学习-使用对象</p>
+                </dd>
+                <dd>
+                    <h4>继续学习 程序语言设计</h4>
+                    <p>正在学习-使用对象</p>
+                </dd>
+                <dd>
+                    <h4>继续学习 程序语言设计</h4>
+                    <p>正在学习-使用对象</p>
+                </dd>
+                <dd>
+                    <a href="#">全部课程</a>
+                </dd>
+            </dl>
+        </div>
+    </div>
+    <!-- 精品推荐 -->
+    <div class="recommend container">
+        <a href="#">精品推荐</a>
+        <a href="#">Jquery</a>
+        <a href="#">Sqart</a>
+        <a href="#">MySql</a>
+        <a href="#">JavaWeb</a>
+        <a href="#">MySQL</a>
+        <a href="#">jAVAwEB</a>
+        <a href="#">修改兴趣</a>
+    </div>
+</body>
+
+</html>
