@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: url(images/bg.jpg) repeat-x;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .nav {
+            height: 75px;
+            /* background-color: pink; */
+        }
+
+        .nav ul li {
+            float: left;
+            margin: 0 12px;
+            padding-top: 21px;
+        }
+
+        .nav li a {
+            /* 行变成行内块，增加高度 */
+            display: inline-block;
+            /* 不给宽度自动缩放 */
+            height: 33px;
+            line-height: 33px;
+            color: #fff;
+            background: url(images/hd.png) no-repeat;
+            padding-left: 15px;
+            text-decoration: none;
+        }
+
+        .nav li a span {
+            display: inline-block;
+            height: 33px;
+            background: url(images/hd.png) no-repeat right;
+            padding-right: 15px
+        }
+    </style>
+</head>
+
+<body>
+    <div class="nav">
+        <ul>
+            <li>
+                <a href="#">
+                    <span>首页</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span>帮助与反馈</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span>公众平台</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span>开发平台</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>
+
+::befor 伪元素选择器，本质上是一插入一个元素（标签 盒子） 只不过是行内元素， 因此可以操作一些css样式值，不能操作块元素css样式值，但是可以通过display：block修改
