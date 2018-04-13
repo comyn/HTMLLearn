@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        textarea {
+            /* 通常设置外边框无 */
+            outline: none;
+            /* 文本域通常设置不可放大缩小 */
+            resize: none;
+            /* 顶线、中线、基线（大部分的底）、底线 
+                通常是与盒子的基线对齐，为了解决这个问题，改成底线对齐，或行内元素改成块元素
+                行内、行内块元素有效，块元素无效
+            */
+            vertical-align: middle;
+        }
+
+        div {
+            margin: 0 auto;
+            text-align: center;
+            border: 5px solid red;
+            background-color: powderblue;
+            width: 200px;
+            height: 200px;
+        }
+
+        img {
+            vertical-align: middle;
+        }
+    </style>
+</head>
+
+<body>
+    自我介绍：
+    <textarea name="szm" id="" cols="30" rows="10"></textarea>
+    <hr>
+    <div> 我是一个块级元素 </div>
+    <hr>
+    <img src="images/1.png" alt="">我是一张图片
+</body>
+
+</html>
