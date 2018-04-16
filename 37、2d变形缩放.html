@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+            margin: 100px auto;
+            /* 动画， */
+            transition: all 0.5s;
+            /* 以某一点位中心点旋转，还可以是center、top、bottom */
+            transform-origin: 20px 30px;
+
+        }
+
+        div:hover {
+            /* 一个参数水平和垂直都执行，两个参数可以分别设置水平和垂直方向 */
+            transform: scale(2);
+            /*  移动、translate(50px, 50px)
+                缩放、scale(1.2,2.0),0.01~0.99缩小，大雨1.01的值为放大
+                旋转、rotate(90deg) deg为度数
+                倾斜、skew(10deg,0) deg表示倾斜多少度,0表示y轴倾斜，正值向左，负值向右
+                以XYZ轴旋转、ratateX、ratateY、rateateZ
+                透视增强立体感、在父元素上添加perspective：500px,远小近大原则
+             */
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+</body>
+
+</html>
